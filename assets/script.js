@@ -14,6 +14,7 @@
     var scrollable = scroller.scrollWidth - scroller.clientWidth > 8;
     var isCardView = window.matchMedia('(max-width: 860px)').matches;
     hint.hidden = !scrollable || isCardView || scroller.scrollLeft > 24;
+    scroller.tabIndex = scrollable && !isCardView ? 0 : -1;
   }
 
   if (scroller && hint) {
