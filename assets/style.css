@@ -461,7 +461,11 @@ li{ margin-bottom:.45rem; }
 .legend-sbi{ color:var(--chart-sbi); }
 .legend-himawari{ color:var(--chart-himawari); border-top-style:dashed; }
 .legend-taiyo-shindan{ color:var(--chart-taiyo-shindan); border-top-style:dotted; }
-.legend-taiyo-chiryo{ color:var(--chart-taiyo-chiryo); border-top-style:double; border-top-width:4px; }
+/* 治療型の凡例はグラフ本体と同じ線種・ひし形の定義を使う。 */
+.legend-taiyo-chiryo{ top:calc(.7em - .375rem); height:.75rem; border:0; }
+.legend-taiyo-chiryo svg{ display:block; width:100%; height:100%; overflow:visible; }
+.legend-taiyo-chiryo path{ fill:none; vector-effect:non-scaling-stroke; }
+.legend-taiyo-chiryo .plot-point{ left:25%; bottom:50%; }
 .legend-budget{ color:#657381; border-top-width:2px; border-top-style:dashed; }
 .legend-point{
   position:absolute; left:.7rem; top:.3em; width:.65rem; height:.65rem;
