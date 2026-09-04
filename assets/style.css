@@ -452,7 +452,7 @@ li{ margin-bottom:.45rem; }
 .premium-figure{
   margin:0; padding:1rem; border:1px solid var(--line); border-radius:var(--radius);
   background:var(--surface); min-width:0;
-  --chart-sbi:#176491; --chart-himawari:#a65316; --chart-kyosai:#17683f;
+  --chart-sbi:#176491; --chart-himawari:#a65316; --chart-kyosai:#17683f; --chart-taiyo-shindan:#754598; --chart-taiyo-chiryo:#087378;
 }
 .premium-figure figcaption{ font-size:1rem; font-weight:800; margin-bottom:.8rem; }
 .chart-legend{ list-style:none; padding:0; font-size:.875rem; line-height:1.6; }
@@ -460,6 +460,8 @@ li{ margin-bottom:.45rem; }
 .legend-line{ position:absolute; top:.7em; left:0; display:block; width:2rem; border-top:3px solid; }
 .legend-sbi{ color:var(--chart-sbi); }
 .legend-himawari{ color:var(--chart-himawari); border-top-style:dashed; }
+.legend-taiyo-shindan{ color:var(--chart-taiyo-shindan); border-top-style:dotted; }
+.legend-taiyo-chiryo{ color:var(--chart-taiyo-chiryo); border-top-style:double; border-top-width:4px; }
 .legend-budget{ color:#657381; border-top-width:2px; border-top-style:dashed; }
 .legend-point{
   position:absolute; left:.7rem; top:.3em; width:.65rem; height:.65rem;
@@ -487,9 +489,13 @@ li{ margin-bottom:.45rem; }
 .plot-line{ stroke-width:3; stroke-linejoin:round; }
 .plot-sbi{ stroke:var(--chart-sbi); }
 .plot-himawari{ stroke:var(--chart-himawari); stroke-dasharray:9 4; }
+.plot-taiyo-shindan{ stroke:var(--chart-taiyo-shindan); stroke-dasharray:2 5; }
+.plot-taiyo-chiryo{ stroke:var(--chart-taiyo-chiryo); stroke-dasharray:12 3 2 3; }
 .plot-point{ display:block; position:absolute; width:.55rem; height:.55rem; transform:translate(-50%,50%); }
 .point-sbi{ border-radius:50%; background:var(--chart-sbi); }
 .point-himawari{ background:var(--chart-himawari); }
+.point-taiyo-shindan{ background:var(--chart-taiyo-shindan); clip-path:polygon(50% 0,100% 100%,0 100%); }
+.point-taiyo-chiryo{ background:var(--chart-taiyo-chiryo); transform:translate(-50%,50%) rotate(45deg); }
 .point-kyosai{ width:.75rem; height:.75rem; border:2px solid var(--chart-kyosai); background:#fff; transform:translate(-50%,50%) rotate(45deg); }
 .plot-x-labels{ position:absolute; top:calc(100% + .65rem); left:0; width:100%; }
 .plot-x-labels > span{ position:absolute; transform:translateX(-50%); white-space:nowrap; font-size:.875rem; line-height:1.4; }
@@ -498,7 +504,7 @@ li{ margin-bottom:.45rem; }
 .chart-unknown{ padding:.8rem; background:var(--warn-bg); border:1px solid var(--warn-line); border-radius:8px; font-size:.9375rem; }
 .chart-values{ margin-bottom:1rem; }
 .chart-values summary{ display:list-item; cursor:pointer; min-height:2.75rem; padding:.6rem .2rem; color:var(--accent); font-weight:700; }
-.chart-data{ font-size:.875rem; table-layout:fixed; }
+.chart-data{ font-size:.875rem; table-layout:fixed; max-width:none; }
 .chart-data th,.chart-data td{ padding:.55rem .35rem; }
 .premium-figure > :last-child{ margin-bottom:0; }
 @media (max-width:540px){
@@ -509,6 +515,12 @@ li{ margin-bottom:.45rem; }
   .ranking-list > li,.apply-box{ padding:1rem; }
   .official-action{ width:100%; }
   .apply-links{ display:block; }
+  .chart-data,.chart-data tbody,.chart-data tr,.chart-data th,.chart-data td{ display:block; width:auto; }
+  .chart-data thead{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+  .chart-data tbody tr{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); margin-bottom:.75rem; }
+  .chart-data tbody th{ grid-column:1/-1; background:var(--accent-weak); }
+  .chart-data td::before{ content:attr(data-label); display:block; font-size:.8125rem; color:var(--muted); }
+
 }
 
 @media print{
