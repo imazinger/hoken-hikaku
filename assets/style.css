@@ -452,7 +452,7 @@ li{ margin-bottom:.45rem; }
 .premium-figure{
   margin:0; padding:1rem; border:1px solid var(--line); border-radius:var(--radius);
   background:var(--surface); min-width:0;
-  --chart-sbi:#176491; --chart-himawari:#a65316; --chart-kyosai:#17683f; --chart-taiyo-shindan:#754598; --chart-taiyo-chiryo:#087378;
+  --chart-sbi:#9b741a; --chart-himawari:#a65316; --chart-kyosai:#17683f; --chart-taiyo-shindan:#754598; --chart-taiyo-chiryo:#087378;
 }
 .premium-figure figcaption{ font-size:1rem; font-weight:800; margin-bottom:.8rem; }
 .chart-legend{ list-style:none; padding:0; font-size:.875rem; line-height:1.6; }
@@ -461,11 +461,10 @@ li{ margin-bottom:.45rem; }
 .legend-sbi{ color:var(--chart-sbi); }
 .legend-himawari{ color:var(--chart-himawari); border-top-style:dashed; }
 .legend-taiyo-shindan{ color:var(--chart-taiyo-shindan); border-top-style:dotted; }
-/* 治療型の凡例はグラフ本体と同じ線種・ひし形の定義を使う。 */
+/* 治療型の凡例はグラフ本体と同じ線種を使い、線だけを表示する。 */
 .legend-taiyo-chiryo{ top:calc(.7em - .375rem); height:.75rem; border:0; }
 .legend-taiyo-chiryo svg{ display:block; width:100%; height:100%; overflow:visible; }
 .legend-taiyo-chiryo path{ fill:none; vector-effect:non-scaling-stroke; }
-.legend-taiyo-chiryo .plot-point{ left:25%; bottom:50%; }
 .legend-budget{ color:#657381; border-top-width:2px; border-top-style:dashed; }
 .legend-point{
   position:absolute; left:.7rem; top:.3em; width:.65rem; height:.65rem;
@@ -479,11 +478,11 @@ li{ margin-bottom:.45rem; }
 }
 .sbi-unconfirmed-region{
   position:absolute; left:67.5676%; top:0; right:0; height:100%;
-  border-left:1px dashed #8196a6; background:rgba(31,78,121,.045);
+  border-left:1px dashed #b59a5c; background:rgba(155,116,26,.06);
 }
 .sbi-unconfirmed-region > span{
   position:absolute; top:.4rem; left:.2rem; right:.2rem; text-align:center;
-  font-size:.8125rem; line-height:1.5; color:var(--accent);
+  font-size:.8125rem; line-height:1.5; color:var(--chart-sbi);
 }
 .plot-body svg{ display:block; position:absolute; inset:0; width:100%; height:100%; overflow:visible; }
 .plot-body svg line,.plot-body svg path{ vector-effect:non-scaling-stroke; fill:none; }
