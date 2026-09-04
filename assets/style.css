@@ -35,7 +35,6 @@
 
   --radius:12px;
   --maxw:1100px;
-  --maxw-wide:1560px;
 }
 
 *,*::before,*::after{box-sizing:border-box;}
@@ -77,7 +76,7 @@ a:hover{ color:var(--accent-dark); }
 .site-header{
   background:linear-gradient(180deg,#22557f 0%,#1c4568 100%);
   color:#fff;
-  padding:2.4rem 0 2rem;
+  padding:1.25rem 0 1.1rem;
   border-bottom:4px solid #143451;
 }
 .site-header .eyebrow{
@@ -92,7 +91,7 @@ a:hover{ color:var(--accent-dark); }
 .updated{ margin:0; font-size:.9rem; color:#c7dcef; }
 
 /* ---------- セクション ---------- */
-main{ padding-block:2.4rem 3rem; }
+main{ padding-block:1.5rem 3rem; }
 
 section{ margin-bottom:3.2rem; }
 
@@ -181,7 +180,7 @@ li{ margin-bottom:.45rem; }
 
 /* ---------- タグ（情報の確かさ） ---------- */
 .tag{
-  display:inline-block; font-size:.72rem; font-weight:800; line-height:1.7;
+  display:inline-block; font-size:.8rem; font-weight:800; line-height:1.7;
   padding:0 .55em; border-radius:999px; border:1px solid;
   margin-inline:.35em .1em; white-space:nowrap; vertical-align:.06em;
 }
@@ -203,8 +202,17 @@ li{ margin-bottom:.45rem; }
   border-radius:var(--radius); padding:1.2rem 1.4rem; margin-bottom:3.2rem;
 }
 .toc h2{ font-size:1.05rem; border-bottom:0; padding:0; margin-bottom:.6rem; }
-.toc ol{ margin:0; padding-left:1.4em; }
-.toc li{ margin-bottom:.3rem; }
+.toc ol{ display:flex; flex-wrap:wrap; gap:.4rem 1.2rem; margin:0; padding:0; list-style:none; }
+.toc li{ margin:0; }
+.toc a{ display:inline-block; padding:.25rem 0; }
+
+/* 読み方の詳細は比較表の後にまとめる */
+.comparison-note{ font-size:.94rem; margin-bottom:1rem; }
+.reading-guide{
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+}
+.reading-guide summary{ cursor:pointer; padding:1rem 1.2rem; font-weight:700; color:var(--accent); }
+.reading-guide-body{ padding:0 1.2rem 1.2rem; }
 
 /* ---------- 比較表 ---------- */
 .scroll-hint{
@@ -212,8 +220,7 @@ li{ margin-bottom:.45rem; }
 }
 
 .table-scroll{
-  /* 画面が広いときは本文幅より広く使う（負のマージンのみ・最小0） */
-  margin-inline:min(0px, calc((100% - min(var(--maxw-wide), 100vw - 2rem)) / 2));
+  margin-inline:0;
   overflow-x:auto;
   -webkit-overflow-scrolling:touch;
   border:1px solid var(--line);
@@ -224,11 +231,11 @@ li{ margin-bottom:.45rem; }
 
 .cmp{
   border-collapse:separate; border-spacing:0;
-  min-width:1500px; width:100%;
+  min-width:920px; width:100%; table-layout:fixed;
   font-size:.92rem; line-height:1.8; background:var(--surface);
 }
 .cmp th,.cmp td{
-  padding:.9rem .95rem; vertical-align:top; text-align:left;
+  padding:.8rem .75rem; vertical-align:top; text-align:left; overflow-wrap:anywhere;
   border-bottom:1px solid var(--line-soft); border-right:1px solid var(--line-soft);
 }
 .cmp thead th{
@@ -253,28 +260,25 @@ li{ margin-bottom:.45rem; }
 .cmp tbody tr:nth-child(even) th[scope="row"]{ background:var(--surface-alt); }
 
 /* 列幅 */
-.cmp thead th:nth-child(1){ width:230px; }
-.cmp thead th:nth-child(2){ width:180px; }
-.cmp thead th:nth-child(3){ width:165px; }
-.cmp thead th:nth-child(4){ width:190px; }
-.cmp thead th:nth-child(5){ width:210px; }
-.cmp thead th:nth-child(6){ width:160px; }
-.cmp thead th:nth-child(7){ width:215px; }
-.cmp thead th:nth-child(8){ width:265px; }
+.cmp thead th:nth-child(1){ width:21%; }
+.cmp thead th:nth-child(2){ width:18%; }
+.cmp thead th:nth-child(3){ width:17%; }
+.cmp thead th:nth-child(4){ width:22%; }
+.cmp thead th:nth-child(5){ width:22%; }
 
 .pname{ display:block; font-weight:800; font-size:.98rem; line-height:1.6; margin-bottom:.3rem; }
-.psub{ display:block; font-size:.8rem; color:var(--muted); font-weight:400; line-height:1.7; margin-bottom:.4rem; }
-.jump{ display:inline-block; font-size:.82rem; font-weight:700; margin-top:.4rem; }
+.psub{ display:block; font-size:.875rem; color:var(--muted); font-weight:400; line-height:1.7; margin-bottom:.4rem; }
+.jump{ display:block; width:fit-content; font-size:.875rem; font-weight:700; margin-top:.4rem; padding:.2rem 0; }
 .price{ display:block; font-weight:800; font-size:1.1rem; line-height:1.5; font-variant-numeric:tabular-nums; }
-.cell-note{ display:block; font-size:.8rem; color:var(--muted); margin-top:.4rem; line-height:1.75; }
+.cell-note{ display:block; font-size:.875rem; color:var(--muted); margin-top:.4rem; line-height:1.75; }
 
 .pro,.con{ margin:0 0 .55rem; font-size:.88rem; line-height:1.75; }
 .pro:last-child,.con:last-child{ margin-bottom:0; }
 .pro::before{ content:"よい点："; font-weight:800; color:var(--ok-fg); }
 .con::before{ content:"注意："; font-weight:800; color:var(--warn-fg); }
 
-/* ---------- 比較表：スマートフォンではカード表示 ---------- */
-@media (max-width:860px){
+/* ---------- 比較表：スマートフォン・印刷ではカード表示 ---------- */
+@media (max-width:860px), print{
   .scroll-hint{ display:none; }
   .table-scroll{
     margin-inline:0; overflow-x:visible; border:0; background:transparent; border-radius:0;
@@ -301,10 +305,18 @@ li{ margin-bottom:.45rem; }
   .cmp tbody tr td:last-child{ border-bottom:0; }
   .cmp tbody td::before{
     content:attr(data-label); display:block;
-    font-size:.8rem; font-weight:800; color:var(--muted);
+    font-size:.875rem; font-weight:800; color:var(--muted);
     letter-spacing:.02em; margin-bottom:.25rem;
   }
 }
+
+/* 更新年齢ごとの参考保険料 */
+.rates{ width:100%; max-width:38rem; border-collapse:collapse; margin:1rem 0; background:var(--surface); }
+.rates caption{ text-align:left; font-size:.9rem; color:var(--muted); margin-bottom:.5rem; }
+.rates th,.rates td{ border:1px solid var(--line); padding:.6rem 1rem; text-align:left; }
+.rates thead th{ background:var(--accent); color:#fff; }
+.rates tbody th{ background:var(--surface-alt); }
+.rates td{ font-variant-numeric:tabular-nums; }
 
 /* ---------- 未確認一覧・リンク集 ---------- */
 .unknown-list{
@@ -346,4 +358,8 @@ li{ margin-bottom:.45rem; }
   .back-to-top,.toc,.skip-link{ display:none!important; }
   body{ background:#fff; font-size:11pt; }
   .table-scroll{ overflow:visible; }
+  .cmp tbody tr,.rates tr{ break-inside:avoid; }
+  h2,h3{ break-after:avoid; }
+  .cols{ display:block; }
+  .card{ margin-bottom:1rem; }
 }

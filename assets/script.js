@@ -13,15 +13,13 @@
     if (!scroller || !hint) return;
     var scrollable = scroller.scrollWidth - scroller.clientWidth > 8;
     var isCardView = window.matchMedia('(max-width: 860px)').matches;
-    hint.hidden = !scrollable || isCardView;
+    hint.hidden = !scrollable || isCardView || scroller.scrollLeft > 24;
   }
 
   if (scroller && hint) {
     updateHint();
     window.addEventListener('resize', updateHint);
-    scroller.addEventListener('scroll', function () {
-      if (scroller.scrollLeft > 24) hint.hidden = true;
-    }, { passive: true });
+    scroller.addEventListener('scroll', updateHint, { passive: true });
   }
 
   /* --- 2. ページの先頭へ戻るボタン --- */

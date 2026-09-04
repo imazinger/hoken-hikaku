@@ -13,18 +13,117 @@
 
 <header class="site-header">
   <div class="wrap">
-    <p class="eyebrow">がん保険の比較資料</p>
     <h1>がん保険 5商品の比較</h1>
-    <p class="lede">53歳・男性・喫煙あり／月3,000円程度の予算で、<strong>「新しいがん治療の費用に備えられるか」</strong>と<strong>「70歳以降も保障を続けられるか」</strong>を中心に整理しました。</p>
+    <p class="lede">53歳・男性・喫煙あり／予算は月3,000円程度。<strong>新しいがん治療への備えと、70歳以降の継続</strong>を比較します。</p>
     <p class="updated">情報確認日：2026年9月4日</p>
   </div>
 </header>
 
 <main id="main" class="wrap">
 
+  <!-- ========== 比較表 ========== -->
+  <section id="table" aria-labelledby="table-h">
+    <h2 id="table-h">5商品の比較表</h2>
+    <p class="comparison-note"><strong>保障内容は同一ではありません。</strong>保険料だけで優劣は判断できません。「新しい治療」は、先進医療・自由診療と同じ意味ではありません。<a href="#terms">用語の違い</a></p>
+    <p class="scroll-hint" id="scrollHint" hidden>← 表は横にスクロールできます →</p>
+    <div class="table-scroll" tabindex="0" role="group" aria-labelledby="table-h">
+      <table class="cmp" role="table">
+        <caption class="visually-hidden">53歳・男性・喫煙あり。月3,000円程度で検討する5商品の比較。</caption>
+        <thead>
+          <tr role="row">
+            <th scope="col" role="columnheader">商品・プラン</th>
+            <th scope="col" role="columnheader">保険料</th>
+            <th scope="col" role="columnheader">70歳以降の継続</th>
+            <th scope="col" role="columnheader">新しい治療への備え</th>
+            <th scope="col" role="columnheader">主な注意点</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr role="row">
+            <th scope="row" role="rowheader">
+              <span class="pname">① 共済経由と聞いている任意保険</span>
+              <span class="tag tag-heard">本人談</span>
+              <a class="jump" href="#kyosai">共済の詳細</a>
+            </th>
+            <td role="cell" data-label="保険料"><span class="price">月3,000円相当</span><span class="cell-note">年36,000円・年一括払い。年額は月額相当×12の計算</span></td>
+            <td role="cell" data-label="70歳以降の継続"><strong>71歳以上は継続不可</strong><span class="cell-note">伺った条件</span></td>
+            <td role="cell" data-label="新しい治療への備え">対応すると説明されている。先進医療・自由診療の対象範囲は不明</td>
+            <td role="cell" data-label="主な注意点">正式商品名は未特定。給付方式・支払上限も未確認</td>
+          </tr>
+          <tr role="row">
+            <th scope="row" role="rowheader">
+              <span class="pname">② SBI損保のがん保険</span>
+              <span class="psub">診断保険金なし</span>
+              <span class="tag tag-official">公式</span>
+              <a class="jump" href="#sbi">SBI損保の詳細</a>
+            </th>
+            <td role="cell" data-label="保険料"><span class="price">月2,886円</span><span class="cell-note">加入時は予算内。割引前／2026年7月料率。年払34,400円</span></td>
+            <td role="cell" data-label="70歳以降の継続">5年ごとに更新<span class="cell-note">53歳加入なら原則93歳満了の計算。終身ではない</span></td>
+            <td role="cell" data-label="新しい治療への備え">所定の先進医療・自由診療を<strong>実額補償</strong></td>
+            <td role="cell" data-label="主な注意点">診断一時金なし。更新時に保険料を再計算<span class="cell-note"><a href="#sbi-renewal">更新年齢ごとの参考額</a></span></td>
+          </tr>
+          <tr role="row">
+            <th scope="row" role="rowheader">
+              <span class="pname">③ 勇気のお守り</span>
+              <span class="psub">SOMPOひまわり生命／通販お手頃プラン</span>
+              <span class="tag tag-official">公式</span>
+              <a class="jump" href="#himawari">勇気のお守りの詳細</a>
+            </th>
+            <td role="cell" data-label="保険料"><span class="price">月4,246円</span><span class="cell-note">予算超過。喫煙者・先進医療特約付き／2025年7月料率</span></td>
+            <td role="cell" data-label="70歳以降の継続"><strong>終身保障・終身払い</strong><span class="cell-note">今回のプランは保険料一定</span></td>
+            <td role="cell" data-label="新しい治療への備え">先進医療の技術料は通算2,000万円。所定の自由診療薬は月20万円、通算12か月</td>
+            <td role="cell" data-label="主な注意点">自由診療薬は定額給付。診断50万円は条件付きで繰り返し対象。<strong>がん保険料免除特約なし</strong></td>
+          </tr>
+          <tr role="row">
+            <th scope="row" role="rowheader">
+              <span class="pname">④ 太陽生命：診断型</span>
+              <span class="psub">参考商品／告知緩和型がん診断保険〔1回型〕</span>
+              <span class="tag tag-official">公式</span>
+              <a class="jump" href="#taiyo-shindan">診断型の詳細</a>
+            </th>
+            <td role="cell" data-label="保険料"><strong>予算への適合は未判定</strong><span class="cell-note">53歳男性・診断50万円・終身の見積もり未取得</span></td>
+            <td role="cell" data-label="70歳以降の継続">終身を選択可能<span class="cell-note">10年の設計もある</span></td>
+            <td role="cell" data-label="新しい治療への備え">診断時の<strong>一時金</strong>を治療費に充てられる。治療費に連動して増える保障ではない</td>
+            <td role="cell" data-label="主な注意点">診断保険金は1回限り。上皮内がん等は設定額の10%。聞いていた商品名との一致は未確認</td>
+          </tr>
+          <tr role="row">
+            <th scope="row" role="rowheader">
+              <span class="pname">⑤ 太陽生命：治療型</span>
+              <span class="psub">参考商品／告知緩和型がん治療保険</span>
+              <span class="tag tag-official">公式</span>
+              <a class="jump" href="#taiyo-chiryo">治療型の詳細</a>
+            </th>
+            <td role="cell" data-label="保険料"><strong>予算への適合は未判定</strong><span class="cell-note">53歳男性・治療給付10万円・終身の見積もり未取得</span></td>
+            <td role="cell" data-label="70歳以降の継続">終身の契約例あり</td>
+            <td role="cell" data-label="新しい治療への備え">公的医療保険の対象となる所定の治療に<strong>定額給付</strong></td>
+            <td role="cell" data-label="主な注意点">自由診療費の補償ではない。給付倍率は通算60倍。聞いていた商品名との一致は未確認</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">金額・継続条件は掲載した設計のものです。太陽生命の2商品は保障内容を比較する参考枠です。支払条件・回数・出典は、各商品の詳しい説明に記載しています。</p>
+  </section>
+
+  <!-- ========== 目次 ========== -->
+  <nav class="toc" aria-labelledby="toc-h">
+    <h2 id="toc-h">詳しい保障・条件を確認</h2>
+    <ol>
+      <li><a href="#terms">「新しい治療」「先進医療」「自由診療」の違い</a></li>
+      <li><a href="#kyosai">① 共済経由と聞いている任意保険</a></li>
+      <li><a href="#sbi">② SBI損保のがん保険</a></li>
+      <li><a href="#himawari">③ SOMPOひまわり生命「勇気のお守り」</a></li>
+      <li><a href="#taiyo-shindan">④ 太陽生命の参考商品①：診断型</a></li>
+      <li><a href="#taiyo-chiryo">⑤ 太陽生命の参考商品②：治療型</a></li>
+      <li><a href="#unknowns">まだ確認できていないことの一覧</a></li>
+      <li><a href="#sources">公式資料へのリンク</a></li>
+    </ol>
+  </nav>
+
   <!-- ========== 比較条件 ========== -->
   <section id="conditions" aria-labelledby="conditions-h">
-    <h2 id="conditions-h">比較の条件と、この資料の読み方</h2>
+    <details class="reading-guide">
+      <summary id="conditions-h">比較の条件と、情報の確かさの表示</summary>
+      <div class="reading-guide-body">
 
     <div class="cols">
       <div class="card">
@@ -58,148 +157,8 @@
       <li><span class="tag tag-calc">計算</span>確認できた数値をもとに計算して求めた金額や年齢</li>
     </ul>
     <p class="note">確認できない事項は、推測で埋めずに「未確認」としています。</p>
-  </section>
-
-  <!-- ========== 目次 ========== -->
-  <nav class="toc" aria-labelledby="toc-h">
-    <h2 id="toc-h">このページの内容</h2>
-    <ol>
-      <li><a href="#table">5商品の比較表</a></li>
-      <li><a href="#terms">「新しい治療」「先進医療」「自由診療」の違い</a></li>
-      <li><a href="#kyosai">① 共済経由と聞いている任意保険</a></li>
-      <li><a href="#sbi">② SBI損保のがん保険</a></li>
-      <li><a href="#himawari">③ SOMPOひまわり生命「勇気のお守り」</a></li>
-      <li><a href="#taiyo-shindan">④ 太陽生命の参考商品①：診断型</a></li>
-      <li><a href="#taiyo-chiryo">⑤ 太陽生命の参考商品②：治療型</a></li>
-      <li><a href="#unknowns">まだ確認できていないことの一覧</a></li>
-      <li><a href="#sources">公式資料へのリンク</a></li>
-    </ol>
-  </nav>
-
-  <!-- ========== 比較表 ========== -->
-  <section id="table" aria-labelledby="table-h">
-    <h2 id="table-h">5商品の比較表</h2>
-    <p>各商品名をたどると、下の詳しい説明に移動できます。</p>
-    <p class="scroll-hint" id="scrollHint" hidden>← 表は横にスクロールできます →</p>
-
-    <div class="table-scroll" tabindex="0" role="group" aria-labelledby="table-h">
-      <table class="cmp" role="table">
-        <caption class="visually-hidden">がん保険5商品の比較表。53歳・男性・喫煙ありの条件。</caption>
-        <thead>
-          <tr role="row">
-            <th scope="col" role="columnheader">商品・プラン</th>
-            <th scope="col" role="columnheader">月額保険料</th>
-            <th scope="col" role="columnheader">70歳以降の継続</th>
-            <th scope="col" role="columnheader">先進医療への対応</th>
-            <th scope="col" role="columnheader">自由診療への対応</th>
-            <th scope="col" role="columnheader">補償のタイプ</th>
-            <th scope="col" role="columnheader">主な支払限度</th>
-            <th scope="col" role="columnheader">主なメリットと注意点</th>
-          </tr>
-        </thead>
-        <tbody>
-
-          <tr role="row">
-            <th scope="row" role="rowheader">
-              <span class="pname">① 共済経由と聞いている任意保険</span>
-              <span class="psub">正式商品名は未特定。ご本人から伺った条件で比較</span>
-              <span class="tag tag-heard">本人談</span>
-              <a class="jump" href="#kyosai">詳しく見る</a>
-            </th>
-            <td role="cell" data-label="月額保険料"><span class="price">月3,000円相当</span><span class="cell-note">年額36,000円・年一括払い。年額は3,000円×12か月として記載<span class="tag tag-calc">計算</span></span></td>
-            <td role="cell" data-label="70歳以降の継続">71歳以上は継続できない<span class="cell-note">伺った条件</span></td>
-            <td role="cell" data-label="先進医療への対応">どこまで対象か不明<span class="tag tag-unknown">未確認</span></td>
-            <td role="cell" data-label="自由診療への対応">どこまで対象か不明<span class="tag tag-unknown">未確認</span></td>
-            <td role="cell" data-label="補償のタイプ">実額補償か定額給付か不明<span class="tag tag-unknown">未確認</span></td>
-            <td role="cell" data-label="主な支払限度">支払上限・回数は不明<span class="tag tag-unknown">未確認</span></td>
-            <td role="cell" data-label="主なメリットと注意点">
-              <p class="pro">現在の予算に合う。新しいがん治療にも備えられると説明されている</p>
-              <p class="con">71歳以降は続けられない。保障の範囲と上限が確認できていない</p>
-            </td>
-          </tr>
-
-          <tr role="row">
-            <th scope="row" role="rowheader">
-              <span class="pname">② SBI損保のがん保険</span>
-              <span class="psub">診断保険金なしのプラン／正式名称：がん治療費用総合保険</span>
-              <span class="tag tag-official">公式</span>
-              <a class="jump" href="#sbi">詳しく見る</a>
-            </th>
-            <td role="cell" data-label="月額保険料"><span class="price">月2,886円</span><span class="cell-note">53歳男性・診断保険金なし・インターネット割引前。年払は34,400円（月払12回分とは一致しません）</span></td>
-            <td role="cell" data-label="70歳以降の継続">5年ごとに更新。原則90歳まで更新でき、最長95歳まで保障<span class="cell-note">53歳加入なら88歳の更新が最後で93歳満了の計算<span class="tag tag-calc">計算</span></span></td>
-            <td role="cell" data-label="先進医療への対応">所定の基準を満たす先進医療の費用を実額で補償</td>
-            <td role="cell" data-label="自由診療への対応">所定の支払基準を満たす自由診療を実額で補償。未承認薬・適応外投与も基準を満たす場合は対象<span class="cell-note">すべての自由診療が対象になるわけではありません</span></td>
-            <td role="cell" data-label="補償のタイプ">実額補償<span class="cell-note">実際にかかった治療費を支払う仕組み</span></td>
-            <td role="cell" data-label="主な支払限度">通院にかかる保険金は1保険期間（5年間）で1,000万円が上限</td>
-            <td role="cell" data-label="主なメリットと注意点">
-              <p class="pro">この条件では加入時の保険料が予算内。対象となる高額な治療費に備えやすい。通院のみの治療にも対応</p>
-              <p class="con">更新のたびに保険料を計算し直す。終身ではない。このプランには診断一時金がない</p>
-            </td>
-          </tr>
-
-          <tr role="row">
-            <th scope="row" role="rowheader">
-              <span class="pname">③ SOMPOひまわり生命「勇気のお守り」</span>
-              <span class="psub">終身がん保険（C2）がん治療給付型・Ⅰ型／通信販売のお手頃プラン／新がん先進医療特約付き</span>
-              <span class="tag tag-official">公式</span>
-              <a class="jump" href="#himawari">詳しく見る</a>
-            </th>
-            <td role="cell" data-label="月額保険料"><span class="price">月4,246円</span><span class="cell-note">53歳男性・喫煙者保険料率・新がん先進医療特約付き。特約なしの設計は月4,175円</span></td>
-            <td role="cell" data-label="70歳以降の継続">保険期間・保険料払込期間ともに終身<span class="cell-note">今回選んだプランの場合</span></td>
-            <td role="cell" data-label="先進医療への対応">新がん先進医療特約で、所定の技術料を通算2,000万円まで保障。別途、所定の支援給付金あり</td>
-            <td role="cell" data-label="自由診療への対応">所定の自由診療の抗がん剤・ホルモン剤治療に月20万円（通算12か月限度）の定額給付<span class="cell-note">実際にかかった額を全額払い戻す仕組みではありません</span></td>
-            <td role="cell" data-label="補償のタイプ">定額給付が中心<span class="cell-note">先進医療の技術料は所定の技術料相当額を保障</span></td>
-            <td role="cell" data-label="主な支払限度">がん治療給付金は通算120か月（1か月に1回）。手術・放射線治療・入院は通算無制限。自由診療の薬剤治療は通算12か月。先進医療の技術料は通算2,000万円</td>
-            <td role="cell" data-label="主なメリットと注意点">
-              <p class="pro">今回のプランは終身で、保険料が一定のため将来の支払額を把握しやすい。診断一時金を治療費や生活費に使える</p>
-              <p class="con">今回のプランは月3,000円の予算を超える。自由診療の実費全額を補償する仕組みではない。終身払いのため保険料の支払いも続く</p>
-            </td>
-          </tr>
-
-          <tr role="row">
-            <th scope="row" role="rowheader">
-              <span class="pname">④ 太陽生命の参考商品①：診断型</span>
-              <span class="psub">告知緩和型がん診断保険〔1回型〕</span>
-              <span class="tag tag-official">公式</span>
-              <a class="jump" href="#taiyo-shindan">詳しく見る</a>
-            </th>
-            <td role="cell" data-label="月額保険料">53歳男性の保険料は取得できていません<span class="tag tag-unknown">未確認</span><span class="cell-note">公式サイトの広告例は50歳男性・診断保険50万円で月2,059円。53歳の保険料としては使えません</span></td>
-            <td role="cell" data-label="70歳以降の継続">保険期間は10年または終身から選択</td>
-            <td role="cell" data-label="先進医療への対応">先進医療そのものを対象とする保障ではない<span class="cell-note">受け取った一時金を費用に充てることはできます</span></td>
-            <td role="cell" data-label="自由診療への対応">自由診療そのものを対象とする保障ではない<span class="cell-note">一時金の使いみちは限定されません</span></td>
-            <td role="cell" data-label="補償のタイプ">定額給付（一時金）<span class="cell-note">治療費が高くなった分だけ増える仕組みではありません</span></td>
-            <td role="cell" data-label="主な支払限度">保険金・給付金の支払いはそれぞれ1回限り。上皮内がん等は設定額の10%</td>
-            <td role="cell" data-label="主なメリットと注意点">
-              <p class="pro">所定の診断時にまとまったお金を受け取れる。告知緩和型で、持病がある方も申し込みを検討しやすい。終身も選べる</p>
-              <p class="con">繰り返し受け取れる商品ではない。実際の治療費に連動しない。告知緩和型のため割高になる場合がある</p>
-            </td>
-          </tr>
-
-          <tr role="row">
-            <th scope="row" role="rowheader">
-              <span class="pname">⑤ 太陽生命の参考商品②：治療型</span>
-              <span class="psub">告知緩和型がん治療保険</span>
-              <span class="tag tag-official">公式</span>
-              <a class="jump" href="#taiyo-chiryo">詳しく見る</a>
-            </th>
-            <td role="cell" data-label="月額保険料">53歳男性の保険料は取得できていません<span class="tag tag-unknown">未確認</span></td>
-            <td role="cell" data-label="70歳以降の継続">終身の契約例が公式サイトに掲載されています</td>
-            <td role="cell" data-label="先進医療への対応">給付の対象は公的医療保険制度の所定の診療行為に限られます</td>
-            <td role="cell" data-label="自由診療への対応">公的医療保険の対象となる所定の診療行為が条件のため、自由診療の費用を補償する商品ではありません</td>
-            <td role="cell" data-label="補償のタイプ">定額給付（所定の治療を受けた月ごと）</td>
-            <td role="cell" data-label="主な支払限度">給付倍率の合計で60倍まで。通常の対象治療は1倍、所定のがんゲノムプロファイリング検査は5倍（同検査は2年に1回が限度）</td>
-            <td role="cell" data-label="主なメリットと注意点">
-              <p class="pro">治療が続く間の費用に備えられる。通院で受ける所定の治療や、所定のがんゲノム検査も給付対象。診断型と組み合わせられる</p>
-              <p class="con">対象となる診療行為が限定される。給付倍率に通算限度がある。自由診療を実額補償する商品ではない</p>
-            </td>
-          </tr>
-
-        </tbody>
-      </table>
-    </div>
-
-    <p class="note">掲載の保険料は、いずれも特定の契約条件での例です。実際の保険料や保障の範囲は、各社の「ご契約のしおり・約款」「契約概要」でご確認ください。がんの保障が始まる時期は商品ごとに異なります（②は90日、③は3か月、④⑤は90日）。</p>
-    <p class="backtop"><a href="#main">▲ ページの先頭へ</a></p>
+      </div>
+    </details>
   </section>
 
   <!-- ========== 用語 ========== -->
@@ -293,7 +252,7 @@
       <dt>参考</dt><dd>診断保険金100万円付きの設計は月払4,400円</dd>
       <dt>喫煙による区分</dt><dd>保険料の区分はありません</dd>
     </dl>
-    <p class="note">保険料は、これまでの調査で確認した2026年7月の保険料表にもとづく金額です（パンフレット記載）。</p>
+    <p class="note">保険料は、公式パンフレットの2026年7月の保険料表にもとづく金額です。</p>
 
     <h3>主な保障</h3>
     <ul>
@@ -319,6 +278,21 @@
       <li>原則90歳まで更新でき、最長95歳まで保障されます。</li>
       <li>53歳で加入して5年ごとに更新すると、<strong>原則として88歳での更新が最後となり、93歳で満了する計算</strong>です<span class="tag tag-calc">計算</span>。「53歳で入れば必ず95歳まで」ではありません。</li>
     </ul>
+    <h3 id="sbi-renewal">更新年齢ごとの保険料の目安</h3>
+    <p>男性・診断保険金なし・割引前の<strong>現行料率を、53歳から5年ごとの更新年齢に当てはめた参考額</strong>です。加入時は予算内でも、同じ料率表では58歳以降に月3,000円を超えます。</p>
+    <table class="rates" aria-describedby="sbi-rates-note">
+      <caption>2026年7月の公式保険料表による月払保険料</caption>
+      <thead><tr><th scope="col">年齢</th><th scope="col">月払保険料</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">53歳</th><td>2,886円</td></tr>
+        <tr><th scope="row">58歳</th><td>3,718円</td></tr>
+        <tr><th scope="row">63歳</th><td>4,456円</td></tr>
+        <tr><th scope="row">68歳</th><td>5,193円</td></tr>
+        <tr><th scope="row">73歳</th><td>5,931円</td></tr>
+      </tbody>
+    </table>
+    <p id="sbi-rates-note" class="note"><strong>将来の更新保険料を保証するものではありません。</strong>実際には更新時の年齢・料率などで再計算されます。インターネット割引は更新契約には適用されません。保障を続けられる年齢と、無理なく払い続けられる金額の両方でご検討ください。</p>
+    <p class="src">出典：<a href="https://www.sbisonpo.co.jp/gan/download/pdf/pamphlet_2022_05.pdf#page=7">SBI損保公式パンフレット・冊子12〜13ページ（月払保険料表）</a></p>
     <p class="note">がんの補償が始まるまでに、90日間の待機期間があります。</p>
 
     <div class="cols">
@@ -357,8 +331,10 @@
 
     <h3>保険料</h3>
     <dl class="kv">
-      <dt>新がん先進医療特約付き</dt><dd><strong>月4,246円</strong>（比較表で採用）</dd>
-      <dt>先進医療特約なし</dt><dd>月4,175円</dd>
+      <dt>先進医療特約付き</dt><dd><strong>月4,246円</strong>（比較表で採用。がん保険料免除特約なし）</dd>
+      <dt>基本保障のみ</dt><dd>月4,175円（先進医療・がん保険料免除の両特約なし）</dd>
+      <dt>がん保険料免除特約のみ追加</dt><dd>月5,475円（先進医療特約なし）</dd>
+      <dt>両方の特約を追加</dt><dd><strong>月5,562円</strong>（新がん先進医療特約＋がん保険料免除特約）</dd>
     </dl>
     <p class="note">この差額は<strong>特約の有無によるもの</strong>で、値上げによる差ではありません。また、この金額は今回選んだ通信販売プランの価格であり、「勇気のお守り」のすべての設計が月3,000円を超えるわけではありません。確認した保険料表は2025年7月現在のものです。</p>
 
@@ -368,6 +344,11 @@
       <li>がん診断給付金：<strong>50万円</strong></li>
       <li>それぞれに支払条件・限度があります。</li>
     </ul>
+
+    <h3>診断給付金を繰り返し受け取れる条件</h3>
+    <p>がん診断給付金は<strong>1回50万円、回数無制限・1年に1回限度</strong>です。初回は初めてがんと医師により診断確定されたときに対象となります。</p>
+    <p>2回目以降は、直前の支払事由該当日から起算して<strong>1年を経過した後</strong>に、所定の新たながんの診断、がん治療のための入院の開始・継続、外来治療、在宅医療による緩和療養のいずれかに該当することが必要です。<strong>毎年自動的に支払われるものではありません。</strong></p>
+    <p class="src">出典：<a href="https://www.himawari-life.co.jp/-/media/himawari/files/goods/support_omamori_courage/booklet/support_omamori_courage.pdf?la=ja-JP#page=3">公式パンフレット・冊子3〜4ページ（がん診断給付金）</a></p>
 
     <h3>先進医療への対応</h3>
     <ul>
@@ -402,7 +383,7 @@
           <li>保険料が一定で、将来の支払額を把握しやすい</li>
           <li>先進医療の技術料に備えられる</li>
           <li>所定の自由診療薬にも定額給付がある</li>
-          <li>診断一時金を治療費や生活費に使える</li>
+          <li>診断50万円を所定の条件で繰り返し受け取れ、治療費や生活費に使える</li>
         </ul>
       </div>
       <div class="card card-con">
@@ -415,7 +396,8 @@
         </ul>
       </div>
     </div>
-    <p class="note">なお公式サイトには、がんと診断された以後の保険料を免除する特約（がん保険料免除特約）の説明があります。<strong>今回比較した通信販売プランにこの特約が含まれるかは確認できていません</strong><span class="tag tag-unknown">未確認</span>。</p>
+    <p class="note"><strong>月4,246円の掲載プランには、がん保険料免除特約は含まれません。</strong>同特約を付けた場合は、初めてがんと医師により診断確定されたときに、所定の条件で以後の保険料の払込みが免除されます。</p>
+    <p class="src">保険料の根拠：<a href="https://www.himawari-life.co.jp/-/media/himawari/files/goods/support_omamori_courage/booklet/support_omamori_courage.pdf?la=ja-JP#page=5">公式パンフレット・冊子7〜8ページ（53歳男性・喫煙者・お手頃プラン）</a></p>
 
     <p class="src">出典：<a href="https://www.himawari-life.co.jp/goods/support_omamori_courage/" rel="noopener">商品ページ</a>／<a href="https://www.himawari-life.co.jp/goods/support_omamori_courage/attention/" rel="noopener">保障条件・注意事項</a>／<a href="https://www.himawari-life.co.jp/-/media/himawari/files/goods/support_omamori_courage/booklet/support_omamori_courage.pdf?la=ja-JP" rel="noopener">通販パンフレット（PDF）</a></p>
     <p class="backtop"><a href="#main">▲ ページの先頭へ</a></p>
@@ -448,8 +430,9 @@
     </ul>
 
     <h3>保険料</h3>
+    <p>比較用の見積もり条件：<strong>契約年齢53歳・男性・診断保険金50万円・保険期間／払込期間ともに終身・クレジットカード月払</strong>。治療型を組み合わせる場合は、それぞれの保険料と合計を分けて確認します。</p>
     <div class="callout callout-warn">
-      <p><strong>53歳男性の正確な月額保険料は取得できていません</strong><span class="tag tag-unknown">未確認</span>。公式ページには50歳男性の広告例（診断保険50万円・終身・クレジットカード月払で月2,059円）がありますが、<strong>53歳の保険料として転用することはできません</strong>。「月3,000円で加入できる」とも判断できません。</p>
+      <p><strong>予算への適合は未判定です。</strong>53歳男性の正確な月額保険料は取得できていません<span class="tag tag-unknown">未確認</span>。公式ページには50歳男性の広告例（診断保険50万円・終身・クレジットカード月払で月2,059円）がありますが、<strong>53歳の保険料として転用することはできません</strong>。「月3,000円で加入できる」とも判断できません。</p>
     </div>
 
     <h3>新しい治療との関係</h3>
@@ -506,7 +489,8 @@
     </div>
 
     <h3>保険料</h3>
-    <p><strong>53歳男性の正確な月額保険料は取得できていません</strong><span class="tag tag-unknown">未確認</span>。「月3,000円で加入できる」とは判断できません。</p>
+    <p>比較用の見積もり条件：<strong>契約年齢53歳・男性・ガン治療給付金10万円・保険期間／払込期間ともに終身・クレジットカード月払</strong>。診断型と組み合わせる場合は、治療型の保険料と合計を分けて確認します。</p>
+    <div class="callout callout-warn"><p><strong>予算への適合は未判定です。</strong>上記条件での保険料と引受可能な組み合わせは確認できていません<span class="tag tag-unknown">未確認</span>。「月3,000円で加入できる」とは判断できません。</p></div>
 
     <h3>新しい治療との関係</h3>
     <p>給付の条件は<strong>公的医療保険の対象となる所定の診療行為</strong>です。自由診療の治療費を補償する商品ではありません。</p>
@@ -545,9 +529,8 @@
       <li>同保険が、実額補償なのか定額給付なのか</li>
       <li>同保険の支払上限・支払回数</li>
       <li>同保険の、将来の保険料と退職後の継続条件</li>
-      <li><strong>太陽生命の2商品</strong>（診断型・治療型）の、53歳男性の月額保険料</li>
+      <li><strong>太陽生命の2商品</strong>の53歳男性・終身・月払の保険料（比較用条件：診断50万円／治療給付10万円）。引受可能な組み合わせと、組み合わせ時の合計保険料</li>
       <li>お聞きになった<strong>「100歳時代ワクワクがん・医療保険」</strong>という商品名と、正式な商品名との一致</li>
-      <li><strong>「勇気のお守り」通信販売プラン</strong>に、がん保険料免除特約が含まれるかどうか</li>
     </ol>
     <p class="backtop"><a href="#main">▲ ページの先頭へ</a></p>
   </section>
