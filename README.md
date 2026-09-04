@@ -67,30 +67,41 @@ python3 -m http.server 8000
 
 ## GitHub Pages での公開手順
 
-公開先リポジトリ・ブランチ・独自ドメインは未指定です。決まり次第、下記の `<ユーザー名>` `<リポジトリ名>` を置き換えてください。
+公開先は **新規リポジトリ `hoken-hikaku`（main ブランチのルート）** を想定しています。
 
-1. GitHub で公開用リポジトリを作成します（Public、または GitHub Pages が使えるプラン）。
-2. このフォルダの中身（`index.html` と `assets/`）をリポジトリの**ルート**に置きます。
-3. コミットしてプッシュします。
+このフォルダはすでに **git リポジトリとして初期化し、初回コミットまで完了** しています
+（ブランチ `main` ／ コミット「がん保険5商品の比較ページを追加」）。
+残っているのは GitHub 側のリポジトリ作成とプッシュだけです。
+
+1. GitHub で `hoken-hikaku` リポジトリを作成します（README や .gitignore は**追加しない**設定で）。
+2. このフォルダで次を実行します。
 
    ```bash
-   git init                      # 既存リポジトリなら不要
-   git add index.html assets README.md
-   git commit -m "がん保険比較ページを追加"
-   git branch -M main
-   git remote add origin https://github.com/<ユーザー名>/<リポジトリ名>.git
+   cd /Users/brossmax/GitHub/hoken-hikaku
+   git remote add origin https://github.com/<ユーザー名>/hoken-hikaku.git
    git push -u origin main
    ```
 
-4. GitHub のリポジトリ画面で **Settings → Pages** を開きます。
-5. **Source** を「Deploy from a branch」、**Branch** を `main` / `/ (root)` に設定して Save します。
-6. 数分後、`https://<ユーザー名>.github.io/<リポジトリ名>/` で公開されます。
+3. リポジトリ画面の **Settings → Pages** を開きます。
+4. **Source** を「Deploy from a branch」、**Branch** を `main` / `/ (root)` にして Save します。
+5. 数分後、`https://<ユーザー名>.github.io/hoken-hikaku/` で公開されます。
 
-補足
+### 公開前に確認してください
 
-- `index.html` をルート以外（例：`docs/`）に置く場合は、手順5の Branch を `main` / `/docs` に変更してください。
-- ファイル名や拡張子に日本語・大文字を使うと環境によって表示できないことがあります。半角小文字のままにしてください。
-- 独自ドメインを使う場合は Settings → Pages の Custom domain に設定し、DNS 側にも設定を追加します（この資料では未設定です）。
+- **GitHub Pages を Public リポジトリで公開すると、ページは誰でも閲覧できます。**
+  このページには年齢・喫煙の有無・予算・共済経由で聞いた条件など、個人の検討条件が含まれます。
+  限定的に共有したい場合は、Private リポジトリ（Pages の利用には有料プランが必要）や、
+  別の共有方法をご検討ください。
+
+### 補足
+
+- コミットの署名は `今田 <s01b1301s@gmail.com>` で設定しています。変更する場合は
+  `git config user.name` と `git config user.email` を設定し直したうえで
+  `git commit --amend --reset-author` を実行してください。
+- `.git/_stale/` には、作業環境の制約で削除できなかった git の一時ファイルが入っています。
+  リポジトリの動作には影響しません。`rm -rf .git/_stale` で削除して構いません。
+- `index.html` をルート以外（例：`docs/`）に置く場合は、手順4の Branch を `main` / `/docs` に変更してください。
+- 独自ドメインを使う場合は Settings → Pages の Custom domain に設定し、DNS 側にも設定を追加します（未設定です）。
 
 ---
 
