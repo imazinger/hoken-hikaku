@@ -821,3 +821,20 @@ footer a {
     color:#000
   }
 }
+
+/* 加入後の月払保険料。未取得の金額には線を描かない。 */
+.premium-panel { margin-top: 36px; padding: 26px; background: #fff; border: 1px solid var(--line); border-radius: 12px; }
+.premium-panel h3 { font-size: 1.5rem; margin: 8px 0 18px; }
+.premium-key { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 20px 0; font-size: .86rem; }
+.premium-key > span { display: inline-flex; align-items: center; gap: 9px; }
+.key-line { width: 28px; border-top: 3px solid; display: inline-block; }
+.rise-line { border-color: #2867a2; }.kyosai-line { border-color: #b56728; }.current-line { border-color: #727772; border-top-style: dashed; }
+.premium-plot { overflow-x: auto; overscroll-behavior-x: contain; }
+.chart-scroll-hint { display: none; margin: 0 0 8px; color: var(--muted); font-size: .82rem; }
+.premium-svg { display: block; width: 100%; min-width: 720px; height: auto; font-family: var(--sans); }
+.premium-amounts { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 25px 0; }
+.premium-amounts article { padding: 20px; background: #f3f6f1; border-radius: 8px; }
+.premium-amounts h4 { margin: 10px 0 0; }.premium-amounts p { font-size: .9rem; }
+.premium-amounts .premium-value { font-size: 2rem; font-weight: 750; margin: 6px 0; color: var(--green); }.premium-value span { font-size: .9rem; }
+@media (max-width:700px) { .premium-panel { padding: 18px 14px; }.premium-panel h3 { font-size: 1.25rem; }.chart-scroll-hint { display: block; }.premium-amounts { grid-template-columns: 1fr; }.premium-panel .notice { padding: 16px; } }
+@media print { .premium-panel { padding: 12px; }.premium-svg { min-width: 0; }.premium-plot { overflow: visible; }.premium-amounts { grid-template-columns: 1fr 1fr; } }
