@@ -822,13 +822,13 @@ footer a {
   }
 }
 
-/* 加入後の月払保険料。未取得の金額には線を描かない。 */
+/* 加入後の月払保険料。4候補と現在の保険を同じ時間軸で比較。 */
 .premium-panel { margin-top: 36px; padding: 26px; background: #fff; border: 1px solid var(--line); border-radius: 12px; }
 .premium-panel h3 { font-size: 1.5rem; margin: 8px 0 18px; }
 .premium-key { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 20px 0; font-size: .86rem; }
 .premium-key > span { display: inline-flex; align-items: center; gap: 9px; }
 .key-line { width: 28px; border-top: 3px solid; display: inline-block; }
-.rise-line { border-color: #2867a2; }.kyosai-line { border-color: #b56728; }.current-line { border-color: #727772; border-top-style: dashed; }
+.himawari-line { border-color: #007f95; }.aflac-line { border-color: #b7355b; }.rise-line { border-color: #2867a2; }.kyosai-line { border-color: #b56728; }.current-line { border-color: #727772; border-top-style: dashed; }
 .premium-plot { overflow-x: auto; overscroll-behavior-x: contain; }
 .chart-scroll-hint { display: none; margin: 0 0 8px; color: var(--muted); font-size: .82rem; }
 .premium-svg { display: block; width: 100%; min-width: 720px; height: auto; font-family: var(--sans); }
